@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+  <title> Equinox University System - GRADES </title>
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+<script>
+  function calculated() {
+    let math4 = document.getElementById('math4').value;
+    let soccer = document.getElementById('soccer').value;
+    let statistics = document.getElementById('statistics').value;
+    let data_structures = document.getElementById('datastructures').value;
+    let webprogramming = document.getElementById('webprogramming').value;
+    let turkish = document.getElementById('turkish').value;
+
+    let calc =
+            (parseFloat(math4) + parseFloat(soccer) + parseFloat(statistics) + parseFloat(data_structures) + parseFloat(webprogramming) + parseFloat(turkish)) / 6;
+
+    letterF = "F";
+    letterD = "D";
+    letterC = "C";
+    letterB = "B";
+    letterA = "A";
+    letterA0 = "A+";
+
+    if (0 <= calc && calc < 20) {
+      document.write('<div class="styling"><p>Your average grade is: </p></div>'+ calc+ '<div class="styling"><p><wbr>and your letter grade is: </p></div>' + letterF);
+    } else if (20 <= calc && calc < 30) {
+      document.write('<div class="styling"><p>Your average grade is: </p></div>'+ calc+ '<div class="styling"><p><wbr>and your letter grade is: </p></div>' + letterD);
+    } else if (30 <= calc && calc < 40) {
+      document.write('<div class="styling"><p>Your average grade is: </p></div>'+ calc+ '<div class="styling"><p><wbr>and your letter grade is: </p></div>' + letterC);
+    } else if (40 <= calc && calc < 60) {
+      document.write('<div class="styling"><p>Your average grade is: </p></div>'+ calc+ '<div class="styling"><p><wbr>and your letter grade is: </p></div>' + letterB);
+    } else if (60 <= calc && calc < 80) {
+      document.write('<div class="styling"><p>Your average grade is: </p></div>'+ calc+ '<div class="styling"><p><wbr>and your letter grade is: </p></div>' + letterA);
+    } else if (80 <= calc && calc <= 100) {
+      document.write('<div class="styling"><p>Your average grade is: </p></div>'+ calc+ '<div class="styling"><p><wbr>and your letter grade is: </p></div>' + letterA0);
+    } else {
+      alert('Your grade is not realistic! Something went wrong.')
+    }
+  }
+
+</script>
+<div>
+  <h1>Your classes' grades and its calculation!</h1>
+  <div class="flex-box">
+    <img src="https://www.bvtack.com/wp-content/uploads/2012/09/MG_8268.jpg">
+    <div class="flex-box">
+      <div class="input">
+        <label>
+             <input type="number" id="math4" placeholder="Math 4">
+        </label>
+        <label>
+             <input type="number" id="soccer" placeholder="Soccer">
+        </label>
+        <label>
+             <input type="number" id="statistics" placeholder="Statistics I">
+        </label>
+        <label>
+             <input type="number" id="datastructures" placeholder="Data Structures">
+        </label>
+        <label>
+             <input type="number" id="webprogramming" placeholder="Web Programming">
+        </label>
+        <label>
+          <input type="number" id="turkish" placeholder="Turkish I">
+        </label>
+        <label>
+        <button id="calculateButton" onclick="calculated()">Calculate</button></input>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
