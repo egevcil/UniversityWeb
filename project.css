@@ -13,7 +13,6 @@ table, th, td {
     padding: 10px;
       }
 
-
 .flex-box {
     display: flex;
     justify-content: center;
@@ -28,7 +27,6 @@ table, th, td {
 }
 
 
-
 ::placeholder {
     font-weight: bold;
     text-indent: 30px;
@@ -37,8 +35,6 @@ table, th, td {
     color: #d84315;
     border: 2px solid #ff5722;
 }
-
-
 
 
 p {
@@ -50,7 +46,6 @@ p {
     border: 2px solid #ff5722;
     text-align: center;
 }
-
 
 
 .styling {
@@ -72,6 +67,10 @@ p {
 .styling li span {
     font-weight: bold;
     margin-right: 10px;
+}
+
+.background {
+    background: url("https://images.hdqwalls.com/wallpapers/orange-black-material-design-8k-62.jpg") no-repeat;
 }
 
 .styling li p {
@@ -97,8 +96,8 @@ input {
 }
 
 input[type="text"],
-input[type="number"],
 input[type="email"],
+input[type="message"],
 
 textarea {
     width: calc(100% - 18px);
@@ -171,5 +170,11 @@ button {
 }
 button.hover {
     color: darkred;
+}
+
+.aligning-left {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
 }
 
