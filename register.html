@@ -2,41 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> Equinox University System - Register </title>
+    <title> Equinox University System - REGISTER </title>
+    <link rel="stylesheet" href="project.css">
 </head>
 <body>
-<div class="input, styling, flex-box">
-    <form class="input, styling, flex-box" id="nodemailer">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Receiver"><br><br>
-        <label for="subject">Subject:</label>
-        <input type="text" id="subject" name="subject" placeholder=""><br><br>
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
-        <input type="button" value="Send Email" onclick="sendMail()">
+<h1>Registration!</h1>
+<div class="background">
+<div class="aligning">
+<img src="https://cdn.icon-icons.com/icons2/1806/PNG/512/iconfinder-contat-us-19sending-4211847_115047.png" title="By sending mail, you can register; student!"
+     alt="Registration">
+    </div>
+<div class="flex-box">
+    <form id="nodemailer">
+        <label for="email">Email:<br>
+        <input type="text" id="email" name="email" placeholder="Receiver"><br>
+        </label>
+        <label for="subject">Subject:<br>
+        <input type="text" id="subject" name="subject" placeholder="Topic"><br>
+        </label>
+        <label for="message">Message:<br>
+        <textarea id="message" name="message" rows="4" cols="50" placeholder="Write what do you think..." required></textarea><br>
+        </label>
+        <button type="submit" value="Send Email" onclick="sendMail()">Send Mail</button>
     </form>
 </div>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script>
-    function sendMail() {
-        const receiver = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const description = document.getElementById('message').value;
-
-        Email.send({
-            Host: "smtp.elasticemail.com",
-            Username: "ege79220@gmail.com",
-            Password: "7491155C22CF3102516288AE8333D8D99401",
-            To: receiver,
-            From: "ege79220@gmail.com",
-            Subject: subject,
-            Body: description,
-        }).then(
-            message => alert("Mail sent successfully")
-        ).catch(
-            error => console.error('Error sending email: ', error)
-        );
-    }
-</script>
+<!-- sending mails -->
+<script async src="project.js" defer></script>
+<script async src="https://smtpjs.com/v3/smtp.js" defer></script>
+</div>
 </body>
 </html>
