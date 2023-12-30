@@ -4,39 +4,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title> Equinox University System - SCHEDULE </title>
     <link rel="stylesheet" href="project.css">
-    <h1> Student's schedule </h1>
 </head>
 <body>
-<div class="flex-box">
-    <img src="https://img.freepik.com/premium-vector/training-icon-vector-training-education-icon-blackboard-with-teacher-seminar-vector-sign_578506-396.jpg">
+<div class="background">
+<h1> Student's schedule </h1>
+<div class="aligning">
+    <img src="https://cdn.icon-icons.com/icons2/3855/PNG/512/schedule_icon_237777.png" title="Look out to your classes, student!"
+         alt="Schedule">
 </div>
+<p id="digital-clock"></p>
 <div class="flex-box">
-<table class="styling" BORDER="1">
-    <tr>  <!-- left to right rows -->
-    <thead>
-    <tr> <!-- Days -->
-        <th>Monday</th>
-        <th>Tuesday</th>
-        <th>Wednesday</th>
-        <th>Thursday</th>
-        <th>Friday</th>
-        <th>Saturday</th>
-    </tr> <!-- first row -->
-    </thead>
-    <tbody>
-    <tr>
-        <td> Soccer </td>
-    </tr>
-    <tr> <!-- second row -->
-        <td> Object-Oriented Programming I </td>
-        <td> Turkish I </td>
-        <td> Web programming I </td>
-        <td> Statistics I </td>
-        <td> Math IV </td> <wbr>
-        <td> Data Structures </td>
-    </tr>
-    </tbody>
-</table>
+    <table>
+        <thead>
+        <tr> <!-- Days -->
+            <th>Days / Hours</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>09.00 - 11.50</td> <!-- Hours -->
+            <td>Soccer</td> <!-- Monday -->
+            <td>Turkish I</td> <!-- Tuesday -->
+            <td>Web Programming I</td> <!-- Wednesday -->
+            <td>Statistics I</td> <!-- Thursday -->
+            <td>Data Structures</td> <!-- Friday -->
+        </tr>
+        <tr>
+            <td>14:00 - 16:50</td> <!-- Hours -->
+            <td>Object-Oriented Programming II</td> <!-- Monday -->
+            <td>Empty</td> <!-- Tuesday -->
+            <td>Empty</td> <!-- Wednesday -->
+            <td>Empty</td> <!-- Thursday -->
+            <td>Math IV</td> <!-- Friday -->
+        </tr>
+        </tbody>
+    </table>
 </div>
+</div>
+<script async defer>
+    document.getElementById("digital-clock").innerHTML = Date();
+</script>
 </body>
 </html>
