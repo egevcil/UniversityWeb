@@ -4,57 +4,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title> Equinox University System - EOIS </title>
     <link rel="stylesheet" href="project.css">
-    <div class="styling">
-    <h1>
-        Welcome to your login page, dear student!
-    </h1>
-    </div>
-    <div class="flex-box">
-     <img
-    src="https://iconape.com/wp-content/png_logo_vector/login2.png"
-     >
-    </div>
-    <link rel="stylesheet" href="project.css">
 </head>
 <body>
+<h1>
+    Welcome to your login page, dear student!
+</h1>
+     <div class="background">
+     <div class="flex-box">
+    <img
+            src="https://cdn.icon-icons.com/icons2/2942/PNG/512/login_icon_183916.png" title="Hello, Student!" alt="Login Page">
+    </div>
     <div class="aligning">
-    <form> <!-- login form -->
+    <form onsubmit="validateEmail()"> <!-- login form -->
         <label for="firstname">Name:</label>
-        <input type="text" id="firstname" name="name" placeholder="Your name">
+        <input type="text" id="firstname" name="name" placeholder="Your name" required>
         <br>
         <label for="surname">Surname:</label>
-        <input type="text" id="surname" surname="surname" placeholder="Your surname">
+        <input type="text" id="surname" name="surname" placeholder="Your surname"  required>
         <br>
         <label for="email">Email:</label>
-        <input type="text" id="email"  email="email" placeholder="Your school e-mail">
+        <input type="text" id="email"  name="email"  placeholder="Your school e-mail" required>
         <br>
         <label for="number">Student Number:</label>
-        <input type="text" id="number" number="number" placeholder="Your student number">
+        <input type="text" id="number" name="number" placeholder="Your student number" required>
         <br>
-        <input type="button" value="Login" onclick="logindisplay()">
+        <button type="submit" value="Login" id="login-btn" onclick="loginAlert()">Login</button>
     </form>
     </div>
     <div class="aligning">
     <a href="grades.html">Grades</a>
     <a href="schedule.html">Lectures' schedule</a>
-    <a href="fpassword.html">Did you forgot your password?</a>
-    <a href="register.html">Student Register</a>
+    <a href="fpassword.html">Did you forget your password?</a>
+    <a href="Register.html">Student Register</a>
     </div>
     <div class="aligning">
     <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3013.3528703668994!2d29.389542376852805!3d40.951847971358575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cad7b50f100fcb%3A0x4bfe6a3dfc7c6a76!2s%C4%B0stanbul%20Okan%20%C3%9Cniversitesi!5e0!3m2!1str!2str!4v1703066216621!5m2!1str!2str"
     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-    <script src="https://smtpjs.com/v3/smtp.js">
-        const validateEmail = (email) => {
-            return String(email)
-                .toLowerCase()
-                .match(
-                    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-                );
-        };
-        const logindisplay = ()=> alert("has been login");
-
-    </script>
+    <script async src="project.js" defer></script></div>
 </body>
 </html>
